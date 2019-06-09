@@ -1,0 +1,70 @@
+
+'''
+the gateway greeter sample in micro
+# srv
+go run ../greeter/srv/main.go --server_address=localhost:9090
+
+# gateway
+go run main.go
+'''
+
+λ D:\xampp\apache\bin\ab.exe -n 10000 -c 500 -p p.txt -T application/x-www-form-urlencoded "http://172.20.72.33:8080/greeter/hello"
+This is ApacheBench, Version 2.3 <$Revision: 1706008 $>
+Copyright 1996 Adam Twiss, Zeus Technology Ltd, http://www.zeustech.net/
+Licensed to The Apache Software Foundation, http://www.apache.org/
+
+Benchmarking 172.20.72.33 (be patient)
+Completed 1000 requests
+Completed 2000 requests
+Completed 3000 requests
+Completed 4000 requests
+Completed 5000 requests
+Completed 6000 requests
+Completed 7000 requests
+Completed 8000 requests
+Completed 9000 requests
+Completed 10000 requests
+Finished 10000 requests
+
+
+
+Server Software:
+Server Hostname:        172.20.72.33
+Server Port:            8080
+
+Document Path:          /greeter/hello
+Document Length:        20 bytes
+
+Concurrency Level:      500
+Time taken for tests:   96.285 seconds
+Complete requests:      10000
+Failed requests:        0
+Total transferred:      1740000 bytes
+Total body sent:        1840000
+HTML transferred:       200000 bytes
+Requests per second:    103.86 [#/sec] (mean)
+Time per request:       4814.234 [ms] (mean)
+Time per request:       9.628 [ms] (mean, across all concurrent requests)
+Transfer rate:          17.65 [Kbytes/sec] received
+                        18.66 kb/s sent
+                        36.31 kb/s total
+
+Connection Times (ms)
+              min  mean[+/-sd] median   max
+Connect:        3    9 112.1      5    3011
+Processing:    48 4692 2718.1   2824   14641
+Waiting:        9 2453 2534.8   1632   14611
+Total:         52 4702 2720.9   2830   14645
+
+Percentage of the requests served within a certain time (ms)
+  50%   2830
+  66%   5686
+  75%   5773
+  80%   5865
+  90%   8663
+  95%   8751
+  98%  11642
+  99%  14605
+ 100%  14645 (longest request)
+
+

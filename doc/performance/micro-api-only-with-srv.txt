@@ -1,0 +1,64 @@
+不启动  api， 直接用 micro api + srv 的测试结果
+==================================================================
+
+λ D:\xampp\apache\bin\ab.exe -n 10000 -c 500 -p p.txt -T application/x-www-form-urlencoded "http://172.20.72.35:8080/rpc"
+This is ApacheBench, Version 2.3 <$Revision: 1706008 $>
+Copyright 1996 Adam Twiss, Zeus Technology Ltd, http://www.zeustech.net/
+Licensed to The Apache Software Foundation, http://www.apache.org/
+
+Benchmarking 172.20.72.35 (be patient)
+Completed 1000 requests
+Completed 2000 requests
+Completed 3000 requests
+Completed 4000 requests
+Completed 5000 requests
+Completed 6000 requests
+Completed 7000 requests
+Completed 8000 requests
+Completed 9000 requests
+Completed 10000 requests
+Finished 10000 requests
+
+
+Server Software:
+Server Hostname:        172.20.72.35
+Server Port:            8080
+
+Document Path:          /rpc
+Document Length:        101 bytes
+
+Concurrency Level:      500
+Time taken for tests:   98.200 seconds
+Complete requests:      10000
+Failed requests:        0
+Non-2xx responses:      10000
+Total transferred:      2190000 bytes
+Total body sent:        1740000
+HTML transferred:       1010000 bytes
+Requests per second:    101.83 [#/sec] (mean)
+Time per request:       4910.006 [ms] (mean)
+Time per request:       9.820 [ms] (mean, across all concurrent requests)
+Transfer rate:          21.78 [Kbytes/sec] received
+                        17.30 kb/s sent
+                        39.08 kb/s total
+
+Connection Times (ms)
+              min  mean[+/-sd] median   max
+Connect:        4    9  79.3      6    3003
+Processing:    62 4679 1775.6   3740    9980
+Waiting:       13 2494 1972.9   2068    9798
+Total:         69 4689 1777.2   3748    9987
+
+Percentage of the requests served within a certain time (ms)
+  50%   3748
+  66%   4244
+  75%   6692
+  80%   6733
+  90%   6898
+  95%   7280
+  98%   9785
+  99%   9833
+ 100%   9987 (longest request)
+
+
+

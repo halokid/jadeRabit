@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+service Echo {
+	rpc Pong(EchoRequest) returns (EchoResponse) {}
+}
+
+message EchoRequest {
+  string reqMsg = 1;
+}
+
+message EchoResponse {
+  string rspMsg = 1;
+}
+
+

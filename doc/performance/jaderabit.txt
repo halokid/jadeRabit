@@ -1,0 +1,55 @@
+λ D:\xampp\apache\bin\ab.exe -n 10000 -c 500  -T application/x-www-form-urlencoded "http://172.20.72.33:8090/echo"
+This is ApacheBench, Version 2.3 <$Revision: 1706008 $>
+Copyright 1996 Adam Twiss, Zeus Technology Ltd, http://www.zeustech.net/
+Licensed to The Apache Software Foundation, http://www.apache.org/
+
+Benchmarking 172.20.72.33 (be patient)
+Completed 1000 requests
+Completed 2000 requests
+Completed 3000 requests
+Completed 4000 requests
+Completed 5000 requests
+Completed 6000 requests
+Completed 7000 requests
+Completed 8000 requests
+Completed 9000 requests
+Completed 10000 requests
+Finished 10000 requests
+
+
+Server Software:
+Server Hostname:        172.20.72.33
+Server Port:            8090
+
+Document Path:          /echo
+Document Length:        38 bytes
+
+Concurrency Level:      500
+Time taken for tests:   88.672 seconds
+Complete requests:      10000
+Failed requests:        0
+Total transferred:      1610000 bytes
+HTML transferred:       380000 bytes
+Requests per second:    112.78 [#/sec] (mean)
+Time per request:       4433.600 [ms] (mean)
+Time per request:       8.867 [ms] (mean, across all concurrent requests)
+Transfer rate:          17.73 [Kbytes/sec] received
+
+Connection Times (ms)
+              min  mean[+/-sd] median   max
+Connect:        2    9 103.8      4    3010
+Processing:   113 4357 2161.3   2792   11720
+Waiting:       20 2293 1978.6   1660    8668
+Total:        116 4366 2163.5   2806   11725
+
+Percentage of the requests served within a certain time (ms)
+  50%   2806
+  66%   5620
+  75%   5649
+  80%   5665
+  90%   5766
+  95%   8662
+  98%   8694
+  99%  11686
+ 100%  11725 (longest request)
+
